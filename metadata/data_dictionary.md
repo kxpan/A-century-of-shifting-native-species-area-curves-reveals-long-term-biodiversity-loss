@@ -2,7 +2,6 @@
 
 ## Metadata for: A century of shifting native species-area curves reveals long-term biodiversity loss
 
-**Manuscript ID**: ELE-01557-2025  
 **Date Created**: 2025-12-10  
 **Last Updated**: 2025-12-10
 

@@ -16,8 +16,6 @@
 │   ├── 02_statistical_analysis.R     # Statistical analyses
 │   ├── 03_figure_generation.R        # Code for all figures
 │   └── functions/                    # Custom functions
-├── figures/                          # Output figures
-└── results/                          # Analysis outputs
 ```
 
 ## Description

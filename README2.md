@@ -20,8 +20,7 @@
 │   ├── 21.plot_data_forest_Non_Natura2000_std.csv                # Code for all figures
 │   ├── 22.species_data_forest_Non_Natura2000_std.csv             # Code for all figures
 │   ├── 23.plot_data_forest_Non_Natura2000_std.csv                # Code for all figures
-│   ├── 24.species_data_forest_Non_Natura2000_std.csv             # Code for all figures
-│   └── functions/                                                # Custom functions
+│   └── 24.species_data_forest_Non_Natura2000_std.csv             # Code for all figures
 ├── code/
 │   ├── 01_data_preparation.R                                     # Data cleaning and preparation
 │   ├── 02_statistical_analysis.R                                 # Statistical analyses

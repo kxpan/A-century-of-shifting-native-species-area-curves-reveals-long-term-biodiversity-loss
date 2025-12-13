@@ -9,24 +9,6 @@
 
 ---
 
-## Overview of Data Files
-
-This repository contains **24 data files** organized by:
-- **Habitat type:** Grassland vs. Forest
-- **Geographic scope:** Nationwide, Natura2000 protected areas, Non-Natura2000 areas
-- **Data level:** Plot-level data vs. Species-level data
-
-### File Naming Convention
-
-Files are numbered as: `[ID].[type]_data_[habitat]_[region]_std.csv`
-
-**Categories:**
-- **01-04:** Nationwide data (Grassland: 01-02, Forest: 03-04)
-- **11-14:** Natura2000 protected areas (Grassland: 11-12, Forest: 13-14)
-- **21-24:** Non-Natura2000 areas (Grassland: 21-22, Forest: 23-24)
-
----
-
 ## NATIONWIDE DATA
 
 ---
@@ -321,9 +303,9 @@ Files are numbered as: `[ID].[type]_data_[habitat]_[region]_std.csv`
 ### Time Periods
 
 Data are grouped into three temporal periods:
-- **Early period:** 1930-1959 (30 years)
-- **Middle period:** 1960-1989 (30 years)
-- **Recent period:** 1990-2017 (28 years)
+- **Early period:** 1930-1959
+- **Middle period:** 1960-1989
+- **Recent period:** 1990-2017
 
 ### Spatial Coverage
 
@@ -341,90 +323,6 @@ Data are grouped into three temporal periods:
 - **Plot data files** contain environmental and spatial information for each sampling location
 - **Species data files** contain lists of species observed at each plot (linked via eventID)
 - Files can be joined using the eventID field
-
-### Taxonomic Information
-
-- Species names follow standard botanical nomenclature
-- Taxonomic authority: [Specify source]
-- Taxonomy date: [Specify version or date]
-
-### Missing Data
-
-- Missing values are coded as: NA
-- Some historical records may lack complete spatial information
-
-### Data Quality
-
-- All data have been standardized and quality-checked
-- Spatial coordinates verified for accuracy
-- Species names validated against current taxonomy
-
----
-
-## Data Processing Notes
-
-### Standardization Steps
-
-1. Species names standardized to current accepted taxonomy
-2. Coordinates transformed to common reference system
-3. Plot sizes verified and outliers checked
-4. Temporal assignment validated
-5. Regional classifications applied (k-means clustering for region_id)
-
-### Known Limitations
-
-1. Sampling effort may vary across time periods
-2. Historical records (1930-1959) may have less complete metadata
-3. Detection probability may differ between observers and time periods
-4. Plot size ranges differ between grassland and forest habitats
-
----
-
-## Usage Notes
-
-### Linking Plot and Species Data
-
-To combine plot-level and species-level data in R:
-
-```r
-plot_data <- read.csv("01.plot_data_grassland_nationalwide_std.csv")
-species_data <- read.csv("02.species_data_grassland_nationalwide_std.csv")
-
-# Join by eventID
-combined_data <- left_join(species_data, plot_data, by = "eventID")
-```
-
-### Calculating Species Richness
-
-Species richness per plot can be calculated by counting unique species per eventID:
-
-```r
-richness <- species_data %>%
-  group_by(eventID) %>%
-  summarise(species_richness = n_distinct(scientificName))
-```
-
----
-
-## Contact Information
-
-For questions about this metadata or data files:
-- **Name:** [Your name]
-- **Email:** [Your email]
-- **Institution:** [Your institution]
-- **ORCID:** [Your ORCID if available]
-
----
-
-## References
-
-[Add relevant citations for data sources, taxonomic authorities, or related publications]
-
----
-
-## Acknowledgments
-
-[Add acknowledgments for data contributors, funding sources, or institutions]
 
 ---
 

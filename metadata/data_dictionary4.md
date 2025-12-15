@@ -32,7 +32,7 @@
 | scientificName | character | - | Scientific name of recorded species in each sampling plot |
 | Year30 | character | - | Time period of observation (1930-1959, 1960-1989, 1990-2017) |
 | sampleSizeValue | numeric | m² | Size of sampled area |
-| Region | integer | - | Whether it is Nationwide, within Natura2000 protected areas (Natura2000) or outside Natura2000 protected areas (Non_Natura2000) |
+| Region | integer | - | Spatial category: nationwide, Natura 2000 protected areas, or non-Natura 2000 (unprotected) areas |
 | geometry | numeric | meters | X and Y coordinates (longitude and latitude of site centroid) |
 
 ---
